@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <span v-if="page.post.image !== null">
+    <span v-if="$page.post.image !== null">
       <g-image immediate class="blogImage mb-4" :src="$page.post.image" />
     </span>
     <div class="blogPost">
