@@ -5,6 +5,8 @@
 </template>
 
 <script>
+const isClient = typeof window !== 'undefined';
+
 export default {
   name: 'Protected',
   beforeRouteEnter: (to, from, next) => {
@@ -13,15 +15,17 @@ export default {
         return next();
       }
       // alert('Please log in or sign up!');
-      vm.$bvModal.msgBoxOk('Please log in or sign up!', {
-        title: 'Error',
-        size: 'sm',
-        buttonSize: 'sm',
-        okVariant: 'danger',
-        headerClass: 'p-2 border-bottom-0',
-        footerClass: 'p-2 border-top-0',
-        centered: true,
-      });
+      if (isClient) {
+        vm.$bvModal.msgBoxOk('Please log in or sign up!', {
+          title: 'Error',
+          size: 'sm',
+          buttonSize: 'sm',
+          okVariant: 'danger',
+          headerClass: 'p-2 border-bottom-0',
+          footerClass: 'p-2 border-top-0',
+          centered: true,
+        });
+      }
       return next('/');
     });
   },
