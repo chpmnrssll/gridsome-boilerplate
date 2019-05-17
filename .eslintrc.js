@@ -1,4 +1,7 @@
 module.exports = {
+  extends: [
+    "airbnb-vue",
+  ],
   parser: "vue-eslint-parser",
   parserOptions: {
     ecmaVersion: 2018,
@@ -14,5 +17,6 @@ module.exports = {
   plugins: ["gridsome"],
   rules: {
     "gridsome/format-query-block": "error",
+    "no-param-reassign": "error",
   },
 };

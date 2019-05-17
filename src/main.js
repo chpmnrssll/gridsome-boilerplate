@@ -1,12 +1,25 @@
-import DefaultLayout from '~/layouts/Default.vue'
+/* eslint no-param-reassign: "error" */
 
-import BootstrapVue from 'bootstrap-vue'
-import './assets/styles/main.scss'
+import Vuex from 'vuex';
+import BootstrapVue from 'bootstrap-vue';
+import { ModalPlugin } from 'bootstrap-vue/es/components';
 
-import checkIfMobile from './mixins/checkIfMobile'
+import DefaultLayout from './layouts/Default.vue';
+import './assets/styles/main.scss';
+import user from './store/modules/user';
+import checkIfMobile from './mixins/checkIfMobile';
 
-export default function (Vue, { router, head, isClient }) {
-  Vue.use(BootstrapVue)
-  Vue.component('Layout', DefaultLayout)
-  Vue.mixin(checkIfMobile)
+export default function(Vue, { appOptions }) {
+  Vue.use(Vuex);
+  appOptions.store = new Vuex.Store({
+    strict: true,
+    modules: {
+      user,
+    },
+  });
+
+  Vue.use(BootstrapVue);
+  Vue.use(ModalPlugin);
+  Vue.component('Layout', DefaultLayout);
+  Vue.mixin(checkIfMobile);
 }
