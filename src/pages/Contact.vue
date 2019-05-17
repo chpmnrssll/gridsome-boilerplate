@@ -3,7 +3,7 @@
     <h1 class="mb-4">Contact</h1>
     <div>
       <img class="contact-image mb-4" src="../../uploads/email.svg" />
-      <b-form 
+      <b-form
         name="contact"
         method="post"
         @submit.prevent="handleSubmit"
@@ -11,12 +11,10 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-      <input type="hidden" name="name" value="contact" />
-      <p hidden>
-        <label>
-          Don’t fill this out: <input name="bot-field" />
-        </label>
-      </p>
+        <input type="hidden" name="name" value="contact" />
+        <p hidden>
+          <label> Don’t fill this out: <input name="bot-field" /> </label>
+        </p>
         <b-form-group id="input-group-2" label="Name:" label-for="form-name">
           <b-form-input
             id="name"
@@ -27,11 +25,7 @@
           />
         </b-form-group>
 
-        <b-form-group
-          id="input-group-1"
-          label="Email:"
-          label-for="email"
-        >
+        <b-form-group id="input-group-1" label="Email:" label-for="email">
           <b-form-input
             id="email"
             v-model="form.email"
@@ -59,39 +53,39 @@
 </template>
 
 <script>
-  export default {
-    metaInfo: {
-      title: 'Contact'
-    },
-    data() {
-      return {
-        form: {
-          name: '',
-          email: '',
-          message: '',
-        },
-      }
-    },
-    methods: {
-      encode(data) {
-        return Object.keys(data)
-          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-          .join('&')
+export default {
+  metaInfo: {
+    title: 'Contact',
+  },
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        message: '',
       },
-      handleSubmit(e) {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.form,
-          }),
-        })
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&');
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.form,
+        }),
+      })
         .then(() => this.$router.push('/success'))
-        .catch(error => alert(error))
-      }
-    }
-  }
+        .catch(error => alert(error));
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

@@ -1,11 +1,13 @@
 <template>
   <header class="header">
     <b-navbar class="p-0" toggleable="md" type="light">
-        <b-navbar-brand>
+      <b-navbar-brand>
         <g-link class="logo-home logo-desktop" to="/">{{ $static.metaData.siteName }}</g-link>
-        <g-link class="logo-home logo–mobile" to="/"><img class="logo-image" alt="logo" src="../assets/images/logo.png"></g-link>
+        <g-link class="logo-home logo–mobile" to="/">
+          <img class="logo-image" alt="logo" src="../assets/images/logo.png" />
+        </g-link>
       </b-navbar-brand>
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="nav_collapse" />
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
           <g-link class="nav--link" to="/about">About</g-link>
@@ -48,7 +50,7 @@ nav {
 }
 
 .logo-desktop {
-  @media(max-width: 419px) {
+  @media (max-width: 419px) {
     display: none;
   }
   @media (min-width: 420px) {
@@ -57,7 +59,7 @@ nav {
 }
 
 .logo–mobile {
-  @media(max-width: 419px) {
+  @media (max-width: 419px) {
     display: default;
   }
   @media (min-width: 420px) {

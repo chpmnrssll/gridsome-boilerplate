@@ -1,35 +1,36 @@
 <template>
   <div class="layout">
     <div id="content-wrapper">
-      <Header/>
-      <slot/>
+      <Header />
+      <slot />
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Footer from '../components/Footer.vue';
+import Header from '../components/Header.vue';
 
 export default {
   components: {
     Footer,
     Header,
   },
-}
+};
 </script>
 
-
 <style lang="scss">
-body, html {
+body,
+html {
   height: 100%;
 }
 
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 

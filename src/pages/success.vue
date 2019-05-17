@@ -9,9 +9,9 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Success'
-  }
-}
+    title: 'Success',
+  },
+};
 </script>
 
 <style lang="scss">
@@ -22,4 +22,3 @@ export default {
   max-width: 500px;
 }
 </style>
-
