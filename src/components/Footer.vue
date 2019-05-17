@@ -28,19 +28,8 @@
 import netlifyIdentity from 'netlify-identity-widget';
 import { mapGetters, mapActions } from 'vuex';
 
-// import Home from '~/components/Home';
-// import Public from '~/components/Public';
-// import Protected from '~/components/Protected';
-
-netlifyIdentity.init();
-
 export default {
   name: 'App',
-  // components: {
-  //   Home,
-  //   Public,
-  //   Protected,
-  // },
   data: () => ({
     currentUser: null,
   }),
@@ -52,6 +41,9 @@ export default {
     username() {
       return this.user ? this.user.username : ', there!';
     },
+  },
+  mounted() {
+    netlifyIdentity.init();
   },
   methods: {
     ...mapActions('user', {
