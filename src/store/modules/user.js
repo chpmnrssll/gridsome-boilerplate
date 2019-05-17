@@ -1,9 +1,11 @@
 /* eslint no-param-reassign: "error" */
 
+const isClient = typeof window !== 'undefined';
+
 export default {
   namespaced: true,
   state: {
-    user: window.localStorage.getItem('user'),
+    user: isClient ? window.localStorage.getItem('user') : null,
   },
 
   getters: {
@@ -22,12 +24,16 @@ export default {
     setUser: (state, currentUser) => {
       if (!currentUser) {
         state.user = null;
-        window.localStorage.removeItem('user');
+        if (isClient) {
+          window.localStorage.removeItem('user');
+        }
         return;
       }
       const theUser = JSON.stringify(currentUser);
       state.user = theUser;
-      window.localStorage.setItem('user', theUser);
+      if (isClient) {
+        window.localStorage.setItem('user', theUser);
+      }
     },
   },
 };
