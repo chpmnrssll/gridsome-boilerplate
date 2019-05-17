@@ -2,7 +2,7 @@
 
 import Vuex from 'vuex';
 import BootstrapVue from 'bootstrap-vue';
-import { ModalPlugin } from 'bootstrap-vue/es/components';
+// import { ModalPlugin } from 'bootstrap-vue/es/components';
 
 import DefaultLayout from './layouts/Default.vue';
 import './assets/styles/main.scss';
@@ -19,7 +19,7 @@ export default function(Vue, { appOptions }) {
   });
 
   Vue.use(BootstrapVue);
-  Vue.use(ModalPlugin);
+  // Vue.use(ModalPlugin);
   Vue.component('Layout', DefaultLayout);
   Vue.mixin(checkIfMobile);
 }
