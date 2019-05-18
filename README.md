@@ -1,8 +1,8 @@
+# Gridsome boilerplate
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/924fc724-1e13-44e8-8161-1d0ce716de9c/deploy-status)](https://app.netlify.com/sites/gridsome-boilerplate/deploys)
 
-# Gridsome static site boilerplate
-
-This is a starter project for Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed, automagically imports data to CMS and sets up your /admin page for easy access to edit your content.
+This is a JAMstack boilerplate using Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed, automagically imports data to CMS and sets up your /admin page for easy access to edit your content.
 
 It is designed to use Netlify and Github which all have very fair free tier to their services, so you wont need to pay for monthly subscriptions and costly hosting fees.
 
@@ -19,17 +19,12 @@ This starter project includes some of the latest powerful technologies.
 *   **Google Analytics -** Just add your tracking ID in the config.
 *   **Sitemap generator -** Automatically generates a sitemap.xml file.
 
-### Netlify config
-
-Use the following build config for Netlify
-
-Build command: `gridsome build`
-
-Publish directory: `dist`
-
 ### NPM tasks
+
 ```
 "dev": "gridsome develop",      // Dev server
 "build": "gridsome build",      // Build to /dist
 "explore": "gridsome explore"   // GraphQL explorer
 ```
+
+[Original Gridsome starter README](README.old.md)
