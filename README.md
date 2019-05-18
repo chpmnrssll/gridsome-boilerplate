@@ -26,5 +26,3 @@ This starter project includes some of the latest powerful technologies.
 "build": "gridsome build",      // Build to /dist
 "explore": "gridsome explore"   // GraphQL explorer
 ```
-
-[Original Gridsome starter README](README.old.md)
