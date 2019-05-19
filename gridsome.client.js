@@ -42,7 +42,7 @@ export default function(Vue, options, context) {
         refresh_token: userData.token.refresh_token,
         token_type: userData.token.token_type,
       });
-      context.router.push({ path: '/admin/' });
+      context.router.push({ path: '/admin' });
     };
 
     netlifyIdentity.init();
