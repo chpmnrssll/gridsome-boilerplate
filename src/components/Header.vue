@@ -14,7 +14,7 @@
           <g-link class="nav--link" to="/blog">Blog</g-link>
           <g-link class="nav--link" to="/contact">Contact</g-link>
           <div v-if="isLoggedIn">
-            <g-link to="/protected">Protected Page</g-link>
+            <g-link class="ml-3" to="/protected">Protected Page</g-link>
             <b-link class="ml-3" @click="triggerNetlifyIdentityAction('logout')">Log Out</b-link>
           </div>
           <div v-else>
