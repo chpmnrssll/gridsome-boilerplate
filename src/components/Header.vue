@@ -13,6 +13,14 @@
           <g-link class="nav--link" to="/about">About</g-link>
           <g-link class="nav--link" to="/blog">Blog</g-link>
           <g-link class="nav--link" to="/contact">Contact</g-link>
+          <div v-if="isLoggedIn">
+            <g-link to="/protected">Protected Page</g-link>
+            <b-link class="ml-3" @click="triggerNetlifyIdentityAction('logout')">Log Out</b-link>
+          </div>
+          <div v-else>
+            <b-link class="ml-3" @click="triggerNetlifyIdentityAction('login')">Log In</b-link>
+            <b-link class="ml-3" @click="triggerNetlifyIdentityAction('signup')">Sign Up</b-link>
+          </div>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -26,6 +34,28 @@ query {
   }
 }
 </static-query>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+  computed: {
+    ...mapGetters('user', {
+      isLoggedIn: 'isLoggedIn',
+    }),
+  },
+  methods: {
+    triggerNetlifyIdentityAction(action) {
+      if (action === 'login' || action === 'signup') {
+        this.$root.$options.netlifyIdentity.open(action);
+      } else if (action === 'logout') {
+        this.$root.$options.netlifyIdentity.logout();
+        this.$router.push('/');
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 nav {

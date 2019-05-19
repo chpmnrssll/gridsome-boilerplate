@@ -1,38 +1,35 @@
 /* eslint no-param-reassign: "error" */
 
-const isClient = typeof window !== 'undefined';
-
 export default {
   namespaced: true,
   state: {
-    user: isClient ? window.localStorage.getItem('user') : null,
+    user: process.isClient ? JSON.parse(window.localStorage.getItem('user')) : null,
   },
 
   getters: {
-    getUserStatus: state => !!state.user,
-    getUser: state => JSON.parse(state.user),
+    isLoggedIn: state => !!state.user,
+    getUser: state => state.user,
   },
 
   actions: {
-    updateUser: ({ commit }, payload) => {
-      commit('setUser', payload.currentUser);
+    updateUser: ({ commit }, userData) => {
+      commit('setUser', userData);
     },
   },
 
   // Mutations Must Be Synchronous
   mutations: {
-    setUser: (state, currentUser) => {
-      if (!currentUser) {
+    setUser: (state, userData) => {
+      if (!userData) {
         state.user = null;
-        if (isClient) {
+        if (process.isClient) {
           window.localStorage.removeItem('user');
         }
-        return;
-      }
-      const theUser = JSON.stringify(currentUser);
-      state.user = theUser;
-      if (isClient) {
-        window.localStorage.setItem('user', theUser);
+      } else {
+        state.user = userData;
+        if (process.isClient) {
+          window.localStorage.setItem('user', JSON.stringify(state.user));
+        }
       }
     },
   },

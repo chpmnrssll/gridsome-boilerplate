@@ -5,34 +5,13 @@
 </template>
 
 <script>
-import netlifyIdentity from 'netlify-identity-widget';
-
-// const isClient = typeof window !== 'undefined';
-
 export default {
   name: 'Protected',
-  beforeRouteEnter: (to, from, next) => {
-    next(vm => {
-      if (vm.$store.state.user.user) {
-        return next();
-      }
-      // alert('Please log in or sign up!');
-      // if (isClient) {
-      //   setTimeout(() => {
-      //     vm.$bvModal.msgBoxOk('Please log in or sign up!', {
-      //       title: 'Error',
-      //       size: 'sm',
-      //       buttonSize: 'sm',
-      //       okVariant: 'danger',
-      //       headerClass: 'p-2 border-bottom-0',
-      //       footerClass: 'p-2 border-top-0',
-      //       centered: true,
-      //     });
-      //   }, 300);
-      // }
-      netlifyIdentity.open();
-      return next('/');
-    });
+  data: () => {
+    return {
+      foo: 'bar',
+    };
   },
+  meta: [{ requiresAuth: true }],
 };
 </script>
