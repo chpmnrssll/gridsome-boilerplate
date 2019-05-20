@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1 class="mb-4">Protected Content</h1>
-    <img class="about-image" src="../../uploads/key-with-lock-square.svg" />
+    <img class="lock-image" src="../../uploads/key-with-lock-square.svg" alt="lock-image" />
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie

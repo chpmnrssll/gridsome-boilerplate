@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <img class="greet-image" src="../../uploads/hello.svg" />
+    <img class="greet-image" src="../../uploads/hello.svg" alt="greet-image" />
 
     <h2 class="mb-4">Gridsome starter bootstrap</h2>
     <p>
@@ -42,7 +42,7 @@
     <a
       href="https://app.forestry.io/quick-start?repo=LokeCarlsson/gridsome-starter-bootstrap&amp;provider=github&amp;engine=vuepress"
       target="_blank"
-      rel="nofollow"
+      rel="noopener"
     >
       <img
         class="mt-3 mb-3"
