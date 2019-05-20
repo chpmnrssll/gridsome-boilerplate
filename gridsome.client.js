@@ -25,7 +25,10 @@ export default function(Vue, options, context) {
 
   if (process.isClient) {
     context.router.beforeEach((to, from, next) => {
-      if (to.matched.some(record => record.meta.requiresAuth) && !store.state.isLoggedIn) {
+      if (
+        !store.getters['user/isLoggedIn'] &&
+        to.matched.some(record => record.meta.requiresAuth)
+      ) {
         netlifyIdentity.open('login');
         next(false);
       } else {
@@ -42,12 +45,12 @@ export default function(Vue, options, context) {
         refresh_token: userData.token.refresh_token,
         token_type: userData.token.token_type,
       });
-      context.router.push({ path: '/admin' });
+      // context.router.push({ path: '/admin' });
     };
 
     netlifyIdentity.init();
     netlifyIdentity.on('login', loginSuccessHandler);
     netlifyIdentity.on('signup', loginSuccessHandler);
-    netlifyIdentity.on('logout', () => store.dispatch('updateUser', null));
+    netlifyIdentity.on('logout', () => store.dispatch('user/updateUser', null));
   }
 }
