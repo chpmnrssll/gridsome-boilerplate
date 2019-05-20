@@ -30,7 +30,7 @@ export default function(Vue, options, context) {
         to.matched.some(record => record.meta.requiresAuth)
       ) {
         netlifyIdentity.open('login');
-        next(false);
+        next('/');
       } else {
         next();
       }
