@@ -35,6 +35,14 @@ module.exports = {
         cacheTime: 600000,
       },
     },
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900,
+      },
+    },
   ],
   chainWebpack: config => {
     config.module
