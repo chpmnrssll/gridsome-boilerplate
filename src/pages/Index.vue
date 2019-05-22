@@ -10,8 +10,7 @@
     >
       <b-carousel-slide>
         <h1>Responsive Design</h1>
-        <b-img
-          fluid-grow
+        <g-image
           class="carousel-image"
           slot="img"
           src="../../uploads/responsive.svg"
@@ -21,8 +20,7 @@
 
       <b-carousel-slide>
         <h1>Code Review</h1>
-        <b-img
-          fluid-grow
+        <g-image
           class="carousel-image"
           slot="img"
           src="../../uploads/code-review.svg"
@@ -32,8 +30,7 @@
 
       <b-carousel-slide>
         <h1>Adjustments</h1>
-        <b-img
-          fluid-grow
+        <g-image
           class="carousel-image"
           slot="img"
           src="../../uploads/adjustments.svg"
@@ -43,16 +40,21 @@
 
       <b-carousel-slide>
         <h1>Profile</h1>
-        <b-img
-          fluid-grow
-          class="carousel-image"
-          slot="img"
-          src="../../uploads/profile.svg"
-          alt="Profile"
-        />
+        <g-image class="carousel-image" slot="img" src="../../uploads/profile.svg" alt="Profile" />
+      </b-carousel-slide>
+
+      <b-carousel-slide>
+        <h1>App</h1>
+        <g-image class="carousel-image" slot="img" src="../../uploads/app.svg" alt="App" />
+      </b-carousel-slide>
+
+      <b-carousel-slide>
+        <h1>Messages</h1>
+        <g-image class="carousel-image" slot="img" src="../../uploads/text.svg" alt="Messages" />
       </b-carousel-slide>
     </b-carousel>
 
+    <h3 class="mt-5 mb-4">About</h3>
     <p>
       This is a JAMstack boilerplate using Gridsome that comes with many features out of the box. It
       utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed,
@@ -93,5 +95,6 @@ export default {
 <style>
 .carousel-image {
   height: 75vh;
+  width: 100%;
 }
 </style>
