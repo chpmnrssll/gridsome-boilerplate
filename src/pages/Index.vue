@@ -1,23 +1,19 @@
 <template>
   <Layout>
-    <!-- <img class="greet-image" src="../../uploads/hello.svg" alt="greet-image" /> -->
     <b-carousel
       id="carousel-1"
       :interval="5000"
       controls
       indicators
       background="#ababab"
-      img-width="1024"
-      img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
     >
       <b-carousel-slide>
         <h1>Responsive Design</h1>
-        <img
+        <b-img
+          fluid-grow
+          class="carousel-image"
           slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
           src="../../uploads/responsive.svg"
           alt="Responsive Design"
         />
@@ -25,17 +21,21 @@
 
       <b-carousel-slide>
         <h1>Code Review</h1>
-        <b-img fluid slot="img" src="../../uploads/code-review.svg" alt="Code Review" />
+        <b-img
+          fluid-grow
+          class="carousel-image"
+          slot="img"
+          src="../../uploads/code-review.svg"
+          alt="Code Review"
+        />
       </b-carousel-slide>
 
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <h1>Adjustments</h1>
-        <img
+        <b-img
+          fluid-grow
+          class="carousel-image"
           slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
           src="../../uploads/adjustments.svg"
           alt="Adjustments"
         />
@@ -43,18 +43,16 @@
 
       <b-carousel-slide>
         <h1>Profile</h1>
-        <img
+        <b-img
+          fluid-grow
+          class="carousel-image"
           slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
           src="../../uploads/profile.svg"
           alt="Profile"
         />
       </b-carousel-slide>
     </b-carousel>
 
-    <h2 class="mb-4">Gridsome starter bootstrap</h2>
     <p>
       This is a JAMstack boilerplate using Gridsome that comes with many features out of the box. It
       utilizes Bootstrap that is well known for powerful styling and layout. Ready to be deployed,
@@ -94,13 +92,6 @@ export default {
 
 <style>
 .carousel-image {
-  width: 100%;
-}
-.greet-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-  padding-bottom: 50px;
+  height: 75vh;
 }
 </style>
