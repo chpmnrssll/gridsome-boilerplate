@@ -191,7 +191,7 @@
       </b-card-group>
     </section>
 
-    <SVGPolygon :height="svgHeight" :triangles="12" />
+    <SVGPolygon :width="svgWidth" :height="svgHeight" :triangles="12" />
   </Layout>
 </template>
 
@@ -205,10 +205,12 @@ export default {
   data: () => {
     return {
       svgHeight: 0,
+      svgWidth: 0,
     };
   },
   mounted() {
     this.$nextTick(() => {
+      this.svgWidth = window.innerWidth;
       const element = document.getElementById('about');
       const rect = element.getBoundingClientRect();
       this.svgHeight = rect.y + rect.height + window.scrollY;

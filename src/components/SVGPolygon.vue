@@ -26,7 +26,7 @@ export default {
     },
     width: {
       type: Number,
-      default: window.innerWidth,
+      default: 0,
     },
   },
   data() {
