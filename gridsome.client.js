@@ -23,6 +23,16 @@ export default function(Vue, options, context) {
   context.appOptions.store = store;
   context.appOptions.netlifyIdentity = netlifyIdentity;
 
+  // Wrap the router-view with a transition tag.
+  // You could do the same with keep-alive etc.
+  context.appOptions.render = h =>
+    h(
+      'transition',
+      { props: { name: 'page', appear: true } },
+      // The router-view component as defined in 0.5.4
+      [h('router-view', { attrs: { id: 'app' } })],
+    );
+
   if (process.isClient) {
     context.router.beforeEach((to, from, next) => {
       if (
