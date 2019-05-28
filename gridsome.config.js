@@ -36,6 +36,13 @@ module.exports = {
       },
     },
     {
+      use: 'gridsome-plugin-purgecss',
+      options: {
+        content: ['./src/**/*.vue', './src/**/*.js', './src/**/*.scss', './src/**/*.md'],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+      },
+    },
+    {
       use: '@gridsome/plugin-critical',
       options: {
         paths: ['/'],
