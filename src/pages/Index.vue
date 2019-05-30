@@ -191,7 +191,7 @@
       </b-card-group>
     </section>
 
-    <SVGPolygon :width="svgWidth" :height="svgHeight" :triangles="12" />
+    <SVGPolygon :targetID="'about'" />
   </Layout>
 </template>
 
@@ -201,20 +201,6 @@ import SVGPolygon from '../components/SVGPolygon.vue';
 export default {
   components: {
     SVGPolygon,
-  },
-  data: () => {
-    return {
-      svgHeight: 0,
-      svgWidth: 0,
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.svgWidth = window.innerWidth;
-      const element = document.getElementById('about');
-      const rect = element.getBoundingClientRect();
-      this.svgHeight = rect.y + rect.height + window.scrollY;
-    });
   },
   metaInfo: {
     title: 'Gridsome starter bootstrap',

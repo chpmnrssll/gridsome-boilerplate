@@ -6,27 +6,19 @@
         <stop offset="100%" :stop-color="gradient.stop" />
       </linearGradient>
       <filter id="dropshadow" height="150%">
-        <feDropShadow />
+        <feDropShadow dy="2" stdDeviation="4" />
       </filter>
     </defs>
-    <polygon :points="points" />
+    <path :d="path" />
   </svg>
 </template>
 
 <script>
 export default {
   props: {
-    height: {
-      type: Number,
-      default: 0,
-    },
-    triangles: {
-      type: Number,
-      default: 8,
-    },
-    width: {
-      type: Number,
-      default: 0,
+    targetID: {
+      type: String,
+      default: null,
     },
   },
   data() {
@@ -35,41 +27,43 @@ export default {
         start: '#ffffff00',
         stop: '#91e5cbaa',
       },
-      pointData: [],
+      path: '',
+      target: null,
     };
   },
-  computed: {
-    viewbox() {
-      return `0 0 ${this.width} ${this.height}`;
-    },
-    triangleSize() {
-      return this.width / this.triangles;
-    },
-    points() {
-      return this.pointData.map(point => `${point.x},${point.y}`).join(' ');
-    },
-  },
-  watch: {
-    height() {
-      this.buildTriangles();
-    },
+  mounted() {
+    this.target = document.getElementById(this.targetID);
+
+    const rect = this.target.getBoundingClientRect();
+
+    this.height = rect.y + rect.height + window.scrollY;
+    this.width = window.innerWidth;
+    this.halfWidth = this.width / 2;
+    this.quarterWidth = this.width / 4;
+    this.displacement = 50;
+    this.ticker = 127;
+    this.tick();
   },
   methods: {
-    buildTriangles() {
-      this.pointData.push({ x: 0, y: 0 });
+    tick() {
+      this.ticker = this.ticker < 255 ? this.ticker + 0.02 : 0;
+      this.currentDisplacement = this.displacement * Math.sin(this.ticker);
+      this.buildCurves();
+      window.requestAnimationFrame(this.tick);
+    },
+    buildCurves() {
+      const startPoint = { x: 0, y: this.height };
+      const controlPoint = { x: this.quarterWidth, y: this.height - this.currentDisplacement };
+      const midPoint = { x: this.halfWidth - this.currentDisplacement, y: this.height };
+      const endPoint = { x: this.width, y: this.height };
 
-      const halfSize = this.triangleSize / 2;
-      for (let i = 0; i < this.triangles; i += 1) {
-        let x = i * this.triangleSize;
+      let pathString = `M 0 0 `;
+      pathString += `L ${startPoint.x} ${startPoint.y} `;
+      pathString += `Q ${controlPoint.x} ${controlPoint.y}, ${midPoint.x} ${midPoint.y} `;
+      pathString += `T ${endPoint.x} ${endPoint.y} `;
+      pathString += `L ${endPoint.x} 0 Z`;
 
-        this.pointData.push({ x, y: this.height });
-        x += halfSize;
-        this.pointData.push({ x, y: this.height + halfSize });
-        x += halfSize;
-        this.pointData.push({ x, y: this.height });
-      }
-
-      this.pointData.push({ x: this.width, y: 0 });
+      this.path = pathString;
     },
   },
 };
@@ -86,7 +80,8 @@ svg {
   z-index: -1;
 }
 
-polygon {
+polygon,
+path {
   fill: url(#header-gradient);
   filter: url(#dropshadow);
 }
