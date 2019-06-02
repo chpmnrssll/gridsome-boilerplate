@@ -2,6 +2,7 @@
   "name": "gridsome-boilerplate",
   "private": true,
   "scripts": {
+    "bootstrap": "node ./bootstrap-fauna-database.js",
     "build": "gridsome build",
     "dev": "gridsome develop",
     "explore": "gridsome explore"
@@ -14,6 +15,8 @@
     "@gridsome/transformer-remark": "^0.2.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.18",
+    "chalk": "^2.4.2",
+    "faunadb": "^2.6.1",
     "gridsome": "^0.5.0",
     "gridsome-plugin-netlify-cms": "^1.0.6",
     "gridsome-plugin-purgecss": "^1.0.12",
@@ -23,6 +26,7 @@
     "netlify-cms": "^2.9.1",
     "netlify-cms-lib-util": "^2.3.2",
     "netlify-identity-widget": "^1.5.2",
+    "netlify-lambda": "^1.4.13",
     "node-sass": "^4.11.0",
     "popper": "^1.0.1",
     "sass-loader": "^7.1.0",
