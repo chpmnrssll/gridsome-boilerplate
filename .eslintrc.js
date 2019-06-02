@@ -18,5 +18,7 @@ module.exports = {
   rules: {
     "gridsome/format-query-block": "error",
     "no-param-reassign": "error",
+    "no-console": "off",
+    "no-alert": "off",
   },
 };
