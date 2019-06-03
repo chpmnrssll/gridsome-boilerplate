@@ -1,14 +1,14 @@
-import faunadb from 'faunadb';
-import getId from './utils/getId';
+const faunadb = require('faunadb');
+const getId = require('./utils/getId');
 
 const client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
 
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   const id = getId(event.path);
-  console.log(`Function 'todo-delete' invoked. delete id: ${id}`);
+  console.log(`Function 'todo-read' invoked. Read id: ${id}`);
 
   return client
-    .query(faunadb.query.Delete(faunadb.query.Ref(`classes/todos/${id}`)))
+    .query(faunadb.query.Get(faunadb.query.Ref(`classes/todos/${id}`)))
     .then(response => {
       console.log('success', response);
 

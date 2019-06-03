@@ -1,10 +1,10 @@
-import faunadb from 'faunadb';
+const faunadb = require('faunadb');
 
 // configure faunaDB Client with our secret
 const client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
 
 // export our lambda function as named "handler" export
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   // parse the string body into a useable JS object
   const data = JSON.parse(event.body);
   const todoItem = { data };

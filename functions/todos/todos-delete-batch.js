@@ -1,8 +1,8 @@
-import faunadb from 'faunadb';
+const faunadb = require('faunadb');
 
 const client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
 
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   const data = JSON.parse(event.body);
   console.log('data', data);
   console.log('Function `todo-delete-batch` invoked', data.ids);
