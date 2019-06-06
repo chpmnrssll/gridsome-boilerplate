@@ -57,11 +57,13 @@ export default {
     }),
     triggerNetlifyIdentityAction(action) {
       if (action === 'login' || action === 'signup') {
-        this.$root.$options.netlifyIdentity.open(action);
+        // this.$root.$options.netlifyIdentity.open(action);
+        window.netlifyIdentity.open(action);
       } else if (action === 'logout') {
-        this.$root.$options.netlifyIdentity.logout();
+        // this.$root.$options.netlifyIdentity.logout();
+        window.netlifyIdentity.logout();
         this.updateUser(null);
-        this.$router.push('/');
+        // this.$router.push('/');
       }
     },
   },
