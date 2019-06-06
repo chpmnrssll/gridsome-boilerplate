@@ -1,0 +1,10 @@
+type User {
+  name: String!
+  email: String!
+  completed: Boolean!
+}
+
+type Query {
+  allUsers: [User!]
+  usersByCompletedFlag(completed: Boolean!): [User!]
+}

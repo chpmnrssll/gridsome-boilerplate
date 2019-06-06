@@ -2,7 +2,6 @@
   "name": "gridsome-boilerplate",
   "private": true,
   "scripts": {
-    "bootstrap": "node ./bootstrap-fauna-database.js",
     "build": "gridsome build",
     "dev": "gridsome develop",
     "explore": "gridsome explore"

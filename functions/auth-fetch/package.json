@@ -1,8 +1,8 @@
 {
-  "name": "fauna-crud",
+  "name": "auth-fetch",
   "version": "1.0.0",
-  "description": "netlify functions:create - CRUD functionality with Fauna DB",
-  "main": "fauna-crud.js",
+  "description": "netlify functions:create - default template for auth fetch function",
+  "main": "auth-fetch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,12 @@
     "netlify",
     "serverless",
     "js",
-    "faunadb"
+    "identity",
+    "authentication"
   ],
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "faunadb": "^2.6.1"
+    "node-fetch": "^2.3.0"
   }
 }
