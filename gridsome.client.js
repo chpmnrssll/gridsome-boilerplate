@@ -35,7 +35,6 @@ export default function(Vue, options, context) {
 
   if (process.isClient) {
     window.netlifyIdentity = netlifyIdentity;
-    console.log(window.netlifyIdentity);
     context.router.beforeEach((to, from, next) => {
       if (
         to.matched.some(record => record.meta.requiresAuth) &&
