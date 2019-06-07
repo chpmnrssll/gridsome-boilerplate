@@ -32,13 +32,7 @@
     "slate-schema-violations": "^0.1.39",
     "vue": "^2.6.10",
     "vuex": "^3.1.1",
-    "webpack": "^4.31.0",
-    "apollo-link-context": "^1.0.17",
-    "apollo-link-http": "^1.5.14",
-    "apollo-server-lambda": "^2.4.8",
-    "graphql": "^14.1.1",
-    "graphql-tools": "^4.0.4",
-    "node-fetch": "^2.3.0"
+    "webpack": "^4.31.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
