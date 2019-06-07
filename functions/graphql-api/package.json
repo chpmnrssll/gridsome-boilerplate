@@ -1,8 +1,8 @@
 {
-  "name": "api",
+  "name": "graphql-api",
   "version": "1.0.0",
   "description": "Netlify serverless function GraphQL + FaunaDB api",
-  "main": "api.js",
+  "main": "graphql-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,7 @@
   "dependencies": {
     "apollo-link-context": "^1.0.17",
     "apollo-link-http": "^1.5.14",
-    "apollo-server-lambda": "^2.6.2",
-    "babel-loader": "^8.0.6",
+    "apollo-server-lambda": "^2.4.8",
     "graphql": "^14.1.1",
     "graphql-tools": "^4.0.4",
     "node-fetch": "^2.3.0"
