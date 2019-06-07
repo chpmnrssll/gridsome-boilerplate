@@ -26,7 +26,7 @@ function createFaunaGraphQL() {
     // // uncomment for debugging
     .then(res => res.text())
     .then(body => {
-      console.log('Netlify Functions:Create - `fauna-graphql/sync-schema.js` success!');
+      console.log('Netlify Functions:Create - `graphql-ap/sync-schema.js` success!');
       console.log(body);
     })
     .catch(err => console.error('something bad happened: ', { err }));
