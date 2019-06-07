@@ -2,7 +2,7 @@
   "name": "gridsome-boilerplate",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "netlify dev:exec functions/fauna-crud/create-schema.js && gridsome build",
     "dev": "gridsome develop",
     "explore": "gridsome explore"
   },
