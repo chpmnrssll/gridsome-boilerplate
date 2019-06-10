@@ -116,7 +116,11 @@ nav {
   width: 40px;
 }
 
+.nav-link * {
+  color: #20c997;
+}
 .nav--link {
+  color: #20c997;
   margin-left: 20px;
   @media (max-width: 419px) {
     margin: 0;
