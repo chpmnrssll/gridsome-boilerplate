@@ -67,6 +67,11 @@
       </p>
     </section>
 
+    <section id="layout">
+      <h3 class="mt-5 pt-mb-4">Layouts</h3>
+      <g-link class="nav--link" to="/agency">Agency</g-link>
+    </section>
+
     <section id="features">
       <h3 class="mt-5 pt-mb-4">Features</h3>
       <p>This starter project includes some of the latest powerful technologies.</p>
@@ -192,6 +197,8 @@
     </section>
 
     <SVGPolygon :targetID="'about'" />
+    <div id="calendly-inline-widget" />
+    <!-- <vue-calendly url="https://calendly.com/chpmnrssll" /> -->
   </Layout>
 </template>
 
@@ -212,6 +219,10 @@ export default {
 #about {
   margin-bottom: 8rem;
   padding-bottom: 4rem;
+}
+
+#calendly-inline-widget {
+  height: 100vw;
 }
 
 .card {

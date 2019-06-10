@@ -1,17 +1,15 @@
 <template>
   <div class="layout">
-    <div id="content-wrapper">
-      <Header />
-      <slot />
-    </div>
+    <Header />
+    <slot />
     <Footer />
   </div>
 </template>
 
 <script>
-import '../assets/styles/default.scss';
-import Footer from '../components/Default/Footer.vue';
-import Header from '../components/Default/Header.vue';
+import '../assets/styles/agency/agency.scss';
+import Footer from '../components/Agency/Footer.vue';
+import Header from '../components/Agency/Header.vue';
 
 export default {
   components: {
@@ -54,12 +52,5 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-#content-wrapper {
-  flex: 1 0 auto;
-  max-width: 950px;
-  width: 90vw;
-  margin: 0 auto;
 }
 </style>
