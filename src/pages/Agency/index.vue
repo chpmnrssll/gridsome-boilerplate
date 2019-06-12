@@ -13,7 +13,7 @@
           It uses utility classes for typography and spacing to space content out within the larger
           container.
         </p>
-        <b-button pill variant="primary" href="#">Do Something</b-button>
+        <b-button pill variant="primary" @click="openCalendlyWidget">Schedule meeting</b-button>
       </b-jumbotron>
       <div class="background-image__first hero-bg position-relative" />
     </section>
@@ -67,35 +67,29 @@
           It uses utility classes for typography and spacing to space content out within the larger
           container.
         </p>
-        <b-button pill variant="primary" href="#">Do Something</b-button>
+        <b-button pill variant="primary" @click="openCalendlyWidget">Schedule meeting</b-button>
         <div class="background-image bg-2" />
       </b-jumbotron>
     </section>
-
-    <div id="calendly-inline-widget" />
-    <!-- <vue-calendly url="https://calendly.com/chpmnrssll" /> -->
   </AgencyLayout>
 </template>
 
 <script>
+import SequentialEntrance from '../../components/Agency/SequentialEntrance.vue';
+
 export default {
+  components: {
+    SequentialEntrance,
+  },
   metaInfo: {
     title: 'Agency Layout',
   },
-  mounted() {
-    const scriptTag = document.createElement('script');
-    document.getElementsByTagName('head')[0].appendChild(scriptTag);
-    scriptTag.onload = () => {
-      window.Calendly.initInlineWidget({
+  methods: {
+    openCalendlyWidget() {
+      window.Calendly.initPopupWidget({
         url: 'https://calendly.com/chpmnrssll',
-        parentElement: document.getElementById('calendly-inline-widget'),
-        text: 'Schedule a meeting',
-        color: '#dde6e3',
-        textColor: '#ffffff',
-        branding: true,
       });
-    };
-    scriptTag.src = 'https://assets.calendly.com/assets/external/widget.js';
+    },
   },
 };
 </script>
@@ -103,10 +97,6 @@ export default {
 <style lang="scss" scoped>
 $deepBlue: #0f4ea5;
 $greenish: #0fa597;
-
-#calendly-inline-widget {
-  height: 100vw;
-}
 
 .deepBlue {
   color: $deepBlue;
