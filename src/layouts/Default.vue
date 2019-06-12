@@ -18,21 +18,6 @@ export default {
     Footer,
     Header,
   },
-  mounted() {
-    const scriptTag = document.createElement('script');
-    document.getElementsByTagName('head')[0].appendChild(scriptTag);
-    scriptTag.onload = () => {
-      window.Calendly.initInlineWidget({
-        url: 'https://calendly.com/chpmnrssll',
-        parentElement: document.getElementById('calendly-inline-widget'),
-        text: 'Schedule a meeting',
-        color: '#dde6e3',
-        textColor: '#ffffff',
-        branding: true,
-      });
-    };
-    scriptTag.src = 'https://assets.calendly.com/assets/external/widget.js';
-  },
 };
 </script>
 

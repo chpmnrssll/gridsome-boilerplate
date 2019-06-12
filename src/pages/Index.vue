@@ -197,8 +197,6 @@
     </section>
 
     <SVGPolygon :targetID="'about'" />
-    <div id="calendly-inline-widget" />
-    <!-- <vue-calendly url="https://calendly.com/chpmnrssll" /> -->
   </Layout>
 </template>
 
@@ -219,10 +217,6 @@ export default {
 #about {
   margin-bottom: 8rem;
   padding-bottom: 4rem;
-}
-
-#calendly-inline-widget {
-  height: 100vw;
 }
 
 .card {
