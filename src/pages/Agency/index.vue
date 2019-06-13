@@ -24,7 +24,7 @@
           <h6 class="font-weight-bold greenish">GRAVIDA NIBH VEL 5</h6>
           <h2 class="font-weight-bold deepBlue">Flexibility & Freedom</h2>
         </div>
-        <div class="row">
+        <SequentialEntrance animation="entranceFromTop" class-name="row">
           <div class="col-sm text-center">
             <g-image class="pb-4" src="~/assets/images/freedom-icon.png" />
             <h3 class="pb-2 deepBlue">Freedom</h3>
@@ -49,7 +49,7 @@
               consequat ipsum nec.
             </p>
           </div>
-        </div>
+        </SequentialEntrance>
       </div>
     </section>
 
@@ -70,6 +70,41 @@
         <b-button pill variant="primary" @click="openCalendlyWidget">Schedule meeting</b-button>
         <div class="background-image bg-2" />
       </b-jumbotron>
+    </section>
+
+    <section class="white-space">
+      <div class="outer-container">
+        <div class="container mb-5 pb-5 text-center">
+          <h6 class="font-weight-bold greenish">GRAVIDA NIBH VEL 5</h6>
+          <h2 class="font-weight-bold deepBlue">Flexibility & Freedom</h2>
+        </div>
+        <SequentialEntrance animation="entranceFromTop" class-name="row">
+          <div class="col-sm text-center">
+            <g-image class="pb-4" src="~/assets/images/freedom-icon.png" />
+            <h3 class="pb-2 deepBlue">Freedom</h3>
+            <p>
+              Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor
+              consequat ipsum nec.
+            </p>
+          </div>
+          <div class="col-sm text-center">
+            <g-image class="pb-4" src="~/assets/images/you-own-it-icon.png" />
+            <h3 class="pb-2 deepBlue">You Own It</h3>
+            <p>
+              Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor
+              consequat ipsum nec.
+            </p>
+          </div>
+          <div class="col-sm text-center">
+            <g-image class="pb-4" src="~/assets/images/flexibility-icon.png" />
+            <h3 class="pb-2 deepBlue">Flexibility</h3>
+            <p>
+              Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor
+              consequat ipsum nec.
+            </p>
+          </div>
+        </SequentialEntrance>
+      </div>
     </section>
   </AgencyLayout>
 </template>
@@ -137,7 +172,7 @@ $greenish: #0fa597;
   .background-image {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 125%;
     height: 100%;
     position: absolute;
     top: 0;
