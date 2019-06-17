@@ -1,11 +1,14 @@
 <template>
   <section class="d-flex flex-column justify-content-around">
-    <div class="container text-center">
-      <h2 class="font-weight-bold">CLASS APTENT</h2>
-      <h1 class="font-weight-bold">Testimonials</h1>
-      <hr />
+    <div class="container-fluid text-center">
+      <div class="container h-25 d-flex flex-column">
+        <h2 class="font-weight-bold">CLASS APTENT</h2>
+        <h1 class="font-weight-bold">Testimonials</h1>
+        <hr />
+      </div>
+
       <SequentialEntrance animation="entranceFromTop" class-name="row py-4">
-        <div class="col-sm px-4 text-center">
+        <div class="col-sm px-4 py-5 text-center">
           <g-image class="pb-4" src="~/assets/images/testimonial-avatar-1.png" alt="Avatar Image" />
           <p>
             “ Proin gravida nibh vel velit auctor aliquet aenean lorem sollicitudin, lorem quis
@@ -16,7 +19,8 @@
           <h3>Anonymous Latin speaker</h3>
           <h4>Florist</h4>
         </div>
-        <div class="col-sm mx-5 px-5 text-center">
+
+        <div class="col-sm p-4 py-5 text-center">
           <g-image class="pb-4" src="~/assets/images/testimonial-avatar-2.png" alt="Avatar Image" />
           <p>
             “ Proin gravida nibh vel velit auctor aliquet aenean lorem sollicitudin, lorem quis

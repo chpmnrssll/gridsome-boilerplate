@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Header />
+    <NavBar />
     <slot />
     <Footer />
   </div>
@@ -8,13 +8,13 @@
 
 <script>
 import '../assets/styles/agency/agency.scss';
+import NavBar from '../components/Agency/NavBar.vue';
 import Footer from '../components/Agency/Footer.vue';
-import Header from '../components/Agency/Header.vue';
 
 export default {
   components: {
+    NavBar,
     Footer,
-    Header,
   },
 };
 </script>
