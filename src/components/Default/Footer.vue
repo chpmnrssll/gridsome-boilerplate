@@ -6,7 +6,7 @@
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
   width: 100%;
   margin-top: 6rem;
