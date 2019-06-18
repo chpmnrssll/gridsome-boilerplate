@@ -39,7 +39,6 @@ section {
     background-image: linear-gradient(225deg, var(--primaryBlue) 0%, var(--primaryGreen) 65%);
     min-height: 100%;
     position: absolute;
-    // max-width: 960px;
     width: 100%;
 
     h1 {

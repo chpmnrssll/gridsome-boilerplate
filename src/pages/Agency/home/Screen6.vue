@@ -105,7 +105,6 @@ section {
 
   .g-image {
     border-radius: 5px 5px 5px 5px;
-    // box-shadow: 0px 35px 73px -20px rgba(15, 78, 165, 0.24);
     max-width: 80vw;
     max-height: 100%;
   }

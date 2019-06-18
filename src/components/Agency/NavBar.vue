@@ -97,16 +97,22 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  // background-image: linear-gradient(225deg, #0f4ea522, #0fa59722),
+  //   linear-gradient(180deg, #00000022, #00000000);
+
   .hamburger-menu {
-    -webkit-text-stroke: 1px #00000022;
-    text-stroke: 1px #00000022;
-    text-shadow: 1px 1px 1px #00000022;
+    // -webkit-text-stroke: 1px #00000022;
+    // text-stroke: 1px #00000022;
+    text-shadow: 1px 1px 2px #00000066, 0px 1px 2px #aaaaaa44;
   }
   .nav-link {
     @extend .hamburger-menu;
     @media (max-width: 640px) {
       font-size: 2rem;
     }
+  }
+  .container-fluid {
+    max-width: 1240px;
   }
 
   #nav_collapse {

@@ -41,8 +41,8 @@ section {
     background-color: transparent;
     background-image: linear-gradient(225deg, var(--primaryBlueA) 0%, var(--primaryGreenA) 65%);
     min-height: 100%;
+    overflow: hidden;
     position: absolute;
-    // max-width: 960px;
     width: 100%;
 
     h1 {

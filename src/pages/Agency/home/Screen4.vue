@@ -1,7 +1,7 @@
 <template>
   <section class="d-flex flex-column justify-content-around">
-    <div class="container-fluid outer-container text-center">
-      <div class="container h-25 d-flex flex-column">
+    <div class="container-fluid text-center">
+      <div class="container d-flex flex-column my-5 py-5">
         <h2 class="font-weight-bold m-4">GRAVIDA NIBH VEL 5</h2>
         <h1 class="font-weight-bold m-4">Bring your Business to Life Instantly</h1>
         <hr class="py-2" />
@@ -12,9 +12,12 @@
         </p>
       </div>
 
-      <div class="container">
-        <SequentialEntrance animation="entranceFromTop" class-name="row">
-          <div class="col-sm p-0 text-center">
+      <div class="container-fluid my-5 py-5">
+        <SequentialEntrance
+          animation="entranceFromTop"
+          class-name="row justify-content-around mb-4"
+        >
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -24,7 +27,7 @@
             />
             <h3 class="my-4">Agency</h3>
           </div>
-          <div class="col-sm p-0 text-center">
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -34,7 +37,7 @@
             />
             <h3 class="my-4">Make-Up Artist</h3>
           </div>
-          <div class="col-sm p-0 text-center">
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -46,8 +49,8 @@
           </div>
         </SequentialEntrance>
 
-        <SequentialEntrance animation="entranceFromTop" class-name="row">
-          <div class="col-sm p-2 text-center">
+        <SequentialEntrance animation="entranceFromTop" class-name="row justify-content-around">
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -57,7 +60,7 @@
             />
             <h3 class="my-4">Fitness Trainer</h3>
           </div>
-          <div class="col-sm p-2 text-center">
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -67,7 +70,7 @@
             />
             <h3 class="my-4">DJ</h3>
           </div>
-          <div class="col-sm p-2 text-center">
+          <div class="col-xs text-center">
             <g-image
               width="352"
               height="472"
@@ -109,10 +112,6 @@ section {
     &:hover {
       transform: translateY(-8px);
     }
-  }
-
-  .outer-container {
-    padding: 120px 0;
   }
 
   .g-image {
