@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="px-0" fixed="top" toggleable="md">
+  <b-navbar class="px-0" :class="{ 'hidden-navbar': !showNavbar }" fixed="top" toggleable="md">
     <div class="container-fluid">
       <b-navbar-brand class="mx-4">
         <g-link to="/agency">
@@ -52,10 +52,15 @@ query {
 /* eslint no-param-reassign: "error" */
 import { mapActions, mapGetters } from 'vuex';
 
+const OFFSET = 40;
+
 export default {
   data() {
     return {
+      showNavbar: true,
       showCollapse: false,
+      lastScrollPosition: 0,
+      scrollValue: 0,
     };
   },
   computed: {
@@ -68,10 +73,29 @@ export default {
       this.blurBackground(val);
     },
   },
+  mounted() {
+    this.lastScrollPosition = window.pageYOffset;
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
+  },
+
   methods: {
     ...mapActions('user', {
       updateUser: 'updateUser',
     }),
+    onScroll() {
+      if (window.pageYOffset < 0) {
+        return;
+      }
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) {
+        return;
+      }
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition;
+      this.lastScrollPosition = window.pageYOffset;
+    },
     blurBackground(val) {
       document
         .getElementById('app')
@@ -96,14 +120,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hidden-navbar {
+  transform: translate3d(0, -100%, 0);
+}
+
 nav {
-  // background-image: linear-gradient(225deg, #0f4ea522, #0fa59722),
-  //   linear-gradient(180deg, #00000022, #00000000);
+  background-image: linear-gradient(225deg, #0f4ea522, #0fa59700);
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s transform linear;
 
   .hamburger-menu {
-    // -webkit-text-stroke: 1px #00000022;
-    // text-stroke: 1px #00000022;
-    text-shadow: 1px 1px 2px #00000066, 0px 1px 2px #aaaaaa44;
+    text-shadow: 0px 1px 2px #aaaaaa88, 1px 2px 3px #00000088;
   }
   .nav-link {
     @extend .hamburger-menu;
