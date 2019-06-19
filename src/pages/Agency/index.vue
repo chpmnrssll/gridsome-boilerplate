@@ -7,6 +7,7 @@
     <Screen5 />
     <Screen6 />
     <Screen7 />
+    <Screen8 />
   </AgencyLayout>
 </template>
 
@@ -18,6 +19,7 @@ import Screen4 from './home/Screen4.vue';
 import Screen5 from './home/Screen5.vue';
 import Screen6 from './home/Screen6.vue';
 import Screen7 from './home/Screen7.vue';
+import Screen8 from './home/Screen8.vue';
 
 export default {
   components: {
@@ -28,9 +30,10 @@ export default {
     Screen5,
     Screen6,
     Screen7,
+    Screen8,
   },
   metaInfo: {
-    title: 'Agency Layout',
+    title: 'Home',
   },
 };
 </script>

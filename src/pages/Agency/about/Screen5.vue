@@ -5,18 +5,16 @@
       container-fluid
       text-variant="light"
     >
-      <h2>gravida nibh vel 5</h2>
-      <h1>Bring Your Business to Life Instantly</h1>
       <hr class="my-4" />
-      <p>
-        Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-        auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
-        nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+      <h1 class="my-2">Are You Ready To Join The Club?</h1>
+      <p class="mb-4">
+        Get a free quote from one of our consultants to discuss which option would work best for
+        your needs
       </p>
-      <b-button @click="openCalendlyWidget" pill variant="primary">
+      <b-button class="my-4" @click="openCalendlyWidget" pill variant="primary">
         Schedule meeting
       </b-button>
-      <g-image src="~/assets/images/bg-2.jpg" alt="" />
+      <g-image src="~/assets/images/bg-4.png" alt="" />
     </b-jumbotron>
   </section>
 </template>
@@ -39,21 +37,22 @@ section {
 
   .jumbotron {
     background-color: transparent;
-    background-image: linear-gradient(225deg, var(--primaryBlueA) 0%, var(--primaryGreenA) 65%);
+    background-image: linear-gradient(225deg, var(--primaryGreen) 0%, var(--primaryBlue) 65%);
     min-height: 100%;
     overflow: hidden;
     position: absolute;
     width: 100%;
 
     h1 {
-      font-size: 3.125rem;
       font-family: 'Nunito', sans-serif;
+      font-size: 2.3125rem;
+      font-weight: 700;
     }
     h2 {
-      font-size: 1.3125rem;
       font-family: 'Nunito', sans-serif;
-      text-transform: uppercase;
+      font-size: 1rem;
       font-weight: 700;
+      text-transform: uppercase;
     }
     hr {
       border-top-style: solid;
@@ -62,21 +61,21 @@ section {
       width: 40px;
     }
     p {
-      font-size: 100%;
       font-family: 'Nunito', sans-serif;
+      font-size: 100%;
     }
     .btn {
-      font-size: 100%;
       font-family: 'Nunito', sans-serif;
+      font-size: 100%;
     }
     .g-image {
-      min-height: 100%;
       left: 0;
+      min-height: 100%;
       object-fit: cover;
+      pointer-events: none;
       position: absolute;
       top: 0;
       width: 100%;
-      z-index: -1;
     }
   }
 }

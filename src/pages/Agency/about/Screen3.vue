@@ -5,18 +5,21 @@
       container-fluid
       text-variant="light"
     >
-      <h2>gravida nibh vel 5</h2>
-      <h1>Bring Your Business to Life Instantly</h1>
+      <h2>CLASS APTEN</h2>
+      <h1>A Bit of History</h1>
       <hr class="my-4" />
       <p>
-        Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-        auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
-        nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+        WEB_Studio was founded on principles of high standards, ethics, and genuine customer
+        service.&nbsp;Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum
+        auctor consequat ipsum nec sagittis vulputate cursus a sit amet mauris morbi accumsan ipsum
+        velit. Nam tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
+        auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Mauris in erat justo.
       </p>
       <b-button @click="openCalendlyWidget" pill variant="primary">
         Schedule meeting
       </b-button>
-      <g-image src="~/assets/images/bg-2.jpg" alt="" />
+      <g-image src="~/assets/images/bg-5.jpg" alt="" />
     </b-jumbotron>
   </section>
 </template>
@@ -46,14 +49,15 @@ section {
     width: 100%;
 
     h1 {
-      font-size: 3.125rem;
       font-family: 'Nunito', sans-serif;
+      font-size: 2.3125rem;
+      font-weight: 700;
     }
     h2 {
-      font-size: 1.3125rem;
       font-family: 'Nunito', sans-serif;
-      text-transform: uppercase;
+      font-size: 1rem;
       font-weight: 700;
+      text-transform: uppercase;
     }
     hr {
       border-top-style: solid;
@@ -62,17 +66,18 @@ section {
       width: 40px;
     }
     p {
-      font-size: 100%;
       font-family: 'Nunito', sans-serif;
+      font-size: 100%;
     }
     .btn {
-      font-size: 100%;
       font-family: 'Nunito', sans-serif;
+      font-size: 100%;
     }
     .g-image {
-      min-height: 100%;
       left: 0;
+      min-height: 100%;
       object-fit: cover;
+      pointer-events: none;
       position: absolute;
       top: 0;
       width: 100%;

@@ -5,18 +5,15 @@
       container-fluid
       text-variant="light"
     >
-      <h2>gravida nibh vel 5</h2>
-      <h1>Bring Your Business to Life Instantly</h1>
-      <hr class="my-4" />
+      <h1>About</h1>
       <p>
-        Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-        auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
-        nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+        This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+        to featured content or information.
       </p>
       <b-button @click="openCalendlyWidget" pill variant="primary">
         Schedule meeting
       </b-button>
-      <g-image src="~/assets/images/bg-2.jpg" alt="" />
+      <g-image src="~/assets/images/hero-bg.png" alt="" />
     </b-jumbotron>
   </section>
 </template>
@@ -39,9 +36,8 @@ section {
 
   .jumbotron {
     background-color: transparent;
-    background-image: linear-gradient(225deg, var(--primaryBlueA) 0%, var(--primaryGreenA) 65%);
+    background-image: linear-gradient(225deg, var(--primaryBlue) 0%, var(--primaryGreen) 65%);
     min-height: 100%;
-    overflow: hidden;
     position: absolute;
     width: 100%;
 
@@ -49,20 +45,9 @@ section {
       font-size: 3.125rem;
       font-family: 'Nunito', sans-serif;
     }
-    h2 {
-      font-size: 1.3125rem;
-      font-family: 'Nunito', sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    hr {
-      border-top-style: solid;
-      border-top-width: 3px;
-      border-top-color: #ffffff;
-      width: 40px;
-    }
     p {
-      font-size: 100%;
+      font-size: 1.3125rem;
+      font-weight: 600;
       font-family: 'Nunito', sans-serif;
     }
     .btn {
@@ -70,13 +55,13 @@ section {
       font-family: 'Nunito', sans-serif;
     }
     .g-image {
-      min-height: 100%;
       left: 0;
+      min-height: 100%;
       object-fit: cover;
+      pointer-events: none;
       position: absolute;
       top: 0;
       width: 100%;
-      z-index: -1;
     }
   }
 }

@@ -8,7 +8,7 @@
       </div>
 
       <SequentialEntrance animation="entranceFromTop" class-name="row">
-        <div class="col text-right">
+        <div class="col text-right mb-5">
           <div class="d-flex flex-column justify-content-around h-100">
             <div class="mb-5">
               <h3 class="pb-2">Highlighted Feature</h3>
@@ -34,14 +34,14 @@
           </div>
         </div>
 
-        <div class="col text-center">
+        <div class="col text-center mb-5">
           <g-image
             src="https://websitedemos.net/agency-04/wp-content/uploads/sites/68/2017/10/graphic-img-1-free-img.png"
             alt="Graphic Image"
           />
         </div>
 
-        <div class="col text-left">
+        <div class="col text-left mb-5">
           <div class="d-flex flex-column justify-content-around h-100">
             <div class="mb-5">
               <h3 class="pb-2">Highlighted Feature</h3>
