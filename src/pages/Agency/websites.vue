@@ -2,7 +2,7 @@
   <AgencyLayout>
     <FullScreenHero>
       <template v-slot:background>
-        <g-image src="~/assets/images/hero-bg.png" alt="" />
+        <g-image src="~/assets/images/hero-bg.png" alt="" immediate />
       </template>
       <template v-slot:body>
         <h1>Websites</h1>
