@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import SequentialEntrance from '../../../components/Agency/SequentialEntrance.vue';
+import SequentialEntrance from './SequentialEntrance.vue';
 
 export default {
   components: {

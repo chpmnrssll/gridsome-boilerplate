@@ -2,7 +2,7 @@
   <section class="d-flex flex-column justify-content-around">
     <div class="container-fluid text-center">
       <div class="container h-25 d-flex flex-column">
-        <h2 class="font-weight-bold m-4">CLASS APTENT TACITI</h2>
+        <h2 class="font-weight-bold m-4">Features</h2>
         <h1 class="font-weight-bold m-4">All You'll Ever Need is Right Here</h1>
         <hr class="py-2" />
       </div>
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import SequentialEntrance from '../../../components/Agency/SequentialEntrance.vue';
+import SequentialEntrance from './SequentialEntrance.vue';
 
 export default {
   components: {
