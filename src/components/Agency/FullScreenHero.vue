@@ -9,13 +9,20 @@
       <div :class="overlay ? 'img-under' : ''">
         <slot name="background" />
       </div>
-      <slot name="body" />
+      <SequentialEntrance animation="entranceFromTop" :delay="50">
+        <slot name="body" />
+      </SequentialEntrance>
     </b-jumbotron>
   </section>
 </template>
 
 <script>
+import SequentialEntrance from './SequentialEntrance.vue';
+
 export default {
+  components: {
+    SequentialEntrance,
+  },
   props: {
     overlay: {
       type: Boolean,
