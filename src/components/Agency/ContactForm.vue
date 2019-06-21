@@ -30,7 +30,6 @@
       <b-form
         action="/agency/thanks/"
         data-netlify="true"
-        data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
         name="agency-contact"
         method="post"
@@ -98,7 +97,6 @@
           </b-form-invalid-feedback>
         </b-form-group>
 
-        <div data-netlify-recaptcha="true" />
         <b-button type="submit" variant="primary">Submit</b-button>
       </b-form>
     </div>
