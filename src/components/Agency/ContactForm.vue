@@ -28,21 +28,22 @@
       </div>
 
       <b-form
-        @submit.prevent="onSubmit"
-        method="post"
-        name="contact"
         action="/agency/thanks/"
         data-netlify="true"
         data-netlify-recaptcha="true"
         data-netlify-honeypot="bot-field"
+        name="agency-contact"
+        method="post"
+        @submit.prevent="onSubmit"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="agency-contact" />
         <input type="hidden" name="bot-field" />
 
         <b-form-group :state="validateName">
           <label for="contact-name">Name</label>
           <b-input
             @blur="enteredField.name = true"
+            required
             :state="validateName"
             v-model="formData.name"
             id="contact-name"
@@ -56,7 +57,9 @@
           <label for="contact-email">Email</label>
           <b-input
             @blur="enteredField.email = true"
+            required
             :state="validateEmail"
+            type="email"
             v-model="formData.email"
             id="contact-email"
           />
@@ -69,6 +72,7 @@
           <label for="contact-subject">Subject</label>
           <b-input
             @blur="enteredField.subject = true"
+            required
             :state="validateSubject"
             v-model="formData.subject"
             id="contact-subject"
@@ -83,6 +87,7 @@
           <b-form-textarea
             id="contact-message"
             @blur="enteredField.message = true"
+            required
             :state="validateMessage"
             v-model="formData.message"
             rows="3"
@@ -138,10 +143,6 @@ export default {
     },
   },
   methods: {
-    // onSubmit(event) {
-    //   event.preventDefault();
-    //   alert(JSON.stringify(this.formData));
-    // },
     encode(data) {
       return Object.keys(data)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -149,6 +150,7 @@ export default {
     },
     onSubmit(event) {
       const action = event.target.getAttribute('action');
+
       fetch(action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

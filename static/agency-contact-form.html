@@ -1,0 +1,17 @@
+<!-- Agency contact stand in/static form -->
+<!-- Required for AJAX form submissions to Netlify from Vue -->
+<form
+  action="/agency/thanks/"
+  hidden
+  name="agency-contact"
+  netlify
+  netlify-honeypot="bot-field"
+  netlify-recaptcha="true"
+>
+  <input type="hidden" name="form-name" value="agency-contact" />
+  <input type="hidden" name="bot-field" />
+  <input type="text" name="contact-name" />
+  <input type="email" name="contact-email" />
+  <input type="text" name="contact-subject" />
+  <input type="text" name="contact-message" />
+</form>
