@@ -149,7 +149,7 @@ export default {
     onSubmit(event) {
       const action = event.target.getAttribute('action');
 
-      fetch(action, {
+      fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
