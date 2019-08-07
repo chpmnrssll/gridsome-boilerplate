@@ -67,11 +67,6 @@
       </p>
     </section>
 
-    <section id="layout">
-      <h3 class="mt-5 pt-mb-4">Layouts</h3>
-      <g-link class="nav--link" to="/agency">Agency</g-link>
-    </section>
-
     <section id="features">
       <h3 class="mt-5 pt-mb-4">Features</h3>
       <p>This starter project includes some of the latest powerful technologies.</p>

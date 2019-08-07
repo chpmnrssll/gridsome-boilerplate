@@ -10,8 +10,8 @@
 
 <script>
 import '../assets/styles/default.scss';
-import Footer from '../components/Default/Footer.vue';
-import Header from '../components/Default/Header.vue';
+import Footer from '../components/Footer.vue';
+import Header from '../components/Header.vue';
 
 export default {
   components: {
