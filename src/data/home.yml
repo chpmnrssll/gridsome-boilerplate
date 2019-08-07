@@ -1,0 +1,55 @@
+section1:
+  banner:
+    contact:
+      href: /contact-form
+      image: /assets/images/mail.svg
+      text: Send us your questions
+      title: Contact
+    directions:
+      href: /directions
+      image: /assets/images/map.svg
+      text: Search locations on Google Map
+      title: Find Location
+    forms:
+      href: /forms
+      image: /assets/images/user.svg
+      text: Fill in details to get started
+      title: New Patients
+  buttonText: Book an appointment
+  header: A better life starts with a beautiful smile
+  image: /assets/images/dental.jpg
+  subHeader: Care in an environment of excellence
+  title: Dental Care Arvada
+section2:
+  body: >-
+    Welcome new and existing patients of Dr. Greg Waters, DDS to our online
+    resource. We try to make visiting our practice a uniquely warm and welcoming
+    experience. You'll find we listen to your treatment goals and make your
+    visits as comfortable as possible. Our goal is to offer the very best
+    quality care in an environment that values each patient. We'll help you
+    achieve a beautiful and healthy smile.
+
+
+    You can access our website to request an appointment, and find answers to
+    your dental questions including procedure animations and informational
+    resources.
+
+
+    Information about our office, including directions, forms you can fill out
+    prior to your visit, insurance carrier and forms of payment accepted are
+    available online. Please don't hesitate to [contact](/contact-form) us as
+    well and enjoy your online visit.
+  header: Three times voted "Denver's Top Dentists" in 5280 Magazine!
+  image: /assets/images/5280_TopDentistsLogo_2015.svg
+section3:
+  body: >-
+    Dr. Waters uses modern, clinically proven methods to offer his patients the
+    best quality care available. His practice is equipped with state of the art
+    E4D technology, which can mill a custom crown on-site. Often with a single
+    visit, Dr. Waters can offer procedures which previously required weeks.
+
+
+    Same Day Crown: You may prefer the convenience and health benefits of
+    eliminating multiple trips when a crowning procedure is necessary.
+  header: Clinically Proven State-of-the-Art Dental Technology
+  image: /assets/images/E4D-machine.png

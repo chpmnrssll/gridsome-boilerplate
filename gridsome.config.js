@@ -4,6 +4,9 @@ module.exports = {
   siteName: 'Gridsome starter bootstrap',
   siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
   siteUrl: 'https://gridsome-boilerplate.netlify.com/',
+  transformers: {
+    netlify: {},
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,12 +20,37 @@ module.exports = {
         },
       },
     },
-    // {
-    //   use: `gridsome-plugin-netlify-cms`,
-    //   options: {
-    //     publicPath: `/admin`,
-    //   },
-    // },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/home.yml',
+        typeName: 'homeData',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/practice.yml',
+        typeName: 'practiceData',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'src/data/footer.yml',
+        typeName: 'footerData',
+      },
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`,
+        modulePath: 'src/admin/index.js',
+      },
+    },
+    {
+      use: 'gridsome-transformer-netlify',
+    },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
