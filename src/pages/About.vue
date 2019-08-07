@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1 class="mb-4">About</h1>
-    <img class="about-image" src="../../uploads/profile.svg" alt="about-image" />
+    <img class="about-image" src="../../static/assets/images/profile.svg" alt="about-image" />
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie

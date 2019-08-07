@@ -12,7 +12,7 @@
         <g-image
           class="carousel-image"
           slot="img"
-          src="../../uploads/responsive.svg"
+          src="../../static/assets/images/responsive.svg"
           alt="Responsive Design"
         />
       </b-carousel-slide>
@@ -22,7 +22,7 @@
         <g-image
           class="carousel-image"
           slot="img"
-          src="../../uploads/code-review.svg"
+          src="../../static/assets/images/code-review.svg"
           alt="Code Review"
         />
       </b-carousel-slide>
@@ -32,24 +32,39 @@
         <g-image
           class="carousel-image"
           slot="img"
-          src="../../uploads/adjustments.svg"
+          src="../../static/assets/images/adjustments.svg"
           alt="Adjustments"
         />
       </b-carousel-slide>
 
       <b-carousel-slide>
         <h1>Profile</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/profile.svg" alt="Profile" />
+        <g-image
+          class="carousel-image"
+          slot="img"
+          src="../../static/assets/images/profile.svg"
+          alt="Profile"
+        />
       </b-carousel-slide>
 
       <b-carousel-slide>
         <h1>App</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/app.svg" alt="App" />
+        <g-image
+          class="carousel-image"
+          slot="img"
+          src="../../static/assets/images/app.svg"
+          alt="App"
+        />
       </b-carousel-slide>
 
       <b-carousel-slide>
         <h1>Messages</h1>
-        <g-image class="carousel-image" slot="img" src="../../uploads/text.svg" alt="Messages" />
+        <g-image
+          class="carousel-image"
+          slot="img"
+          src="../../static/assets/images/text.svg"
+          alt="Messages"
+        />
       </b-carousel-slide>
     </b-carousel>
 
@@ -72,7 +87,7 @@
       <p>This starter project includes some of the latest powerful technologies.</p>
 
       <b-card-group deck>
-        <b-card img-src="../../uploads/code-review.svg" img-alt="Built with" img-top>
+        <b-card img-src="../../static/assets/images/code-review.svg" img-alt="Built with" img-top>
           <b-card-title>Built with</b-card-title>
           <b-list-group flush>
             <b-list-group-item
@@ -106,7 +121,7 @@
           </b-list-group>
         </b-card>
 
-        <b-card img-src="../../uploads/profile.svg" img-alt="Authoring" img-top>
+        <b-card img-src="../../static/assets/images/profile.svg" img-alt="Authoring" img-top>
           <b-card-title>Authoring</b-card-title>
           <b-list-group flush>
             <b-list-group-item
@@ -133,7 +148,11 @@
           </b-list-group>
         </b-card>
 
-        <b-card img-src="../../uploads/responsive.svg" img-alt="Responsive Design" img-top>
+        <b-card
+          img-src="../../static/assets/images/responsive.svg"
+          img-alt="Responsive Design"
+          img-top
+        >
           <b-card-title>Styling</b-card-title>
           <b-list-group flush>
             <b-list-group-item
@@ -162,7 +181,7 @@
       </b-card-group>
 
       <b-card-group deck>
-        <b-card img-src="../../uploads/adjustments.svg" img-alt="Data" img-left>
+        <b-card img-src="../../static/assets/images/adjustments.svg" img-alt="Data" img-left>
           <b-card-title>Data</b-card-title>
           <b-list-group flush>
             <b-list-group-item
