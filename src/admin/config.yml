@@ -3,8 +3,8 @@ backend:
   repo: chpmnrssll/gridsome-boilerplate
   squash_merges: true
 
-media_folder: "/uploads"
-public_folder: "/uploads"
+media_folder: "/static/assets/images"   # file location in repository
+public_folder: "/assets/images"         # file location in production build (saved to yaml)
 
 collections:
   - name: "posts"
@@ -19,3 +19,73 @@ collections:
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Image", name: "image", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Home page"
+        name: "homePage"
+        file: "/src/data/home.yml"
+        fields:
+          - label: "Section 1"
+            name: "section1"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Sub Header", name: "subHeader", widget: "string" }
+              - { label: "CTA Button Text", name: "buttonText", widget: "string" }
+              - label: "Banner"
+                name: "banner"
+                widget: "object"
+                fields:
+                  - label: "Directions"
+                    name: "directions"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                  - label: "Forms"
+                    name: "forms"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                  - label: "Contact"
+                    name: "contact"
+                    widget: "object"
+                    fields:
+                      - { label: "URL", name: "href", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+
+          - label: "Section 2"
+            name: "section2"
+            widget: "object"
+            fields:
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Body", name: "body", widget: "markdown" }
+
+          - label: "Section 3"
+            name: "section3"
+            widget: "object"
+            fields:
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Footer"
+        name: "footer"
+        file: "/src/data/footer.yml"
+        fields:
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Show Netlify-CMS Link", name: "netlifyCMSLink", widget: "boolean", default: true, required: false }
