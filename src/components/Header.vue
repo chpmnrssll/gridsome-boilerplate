@@ -13,6 +13,9 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
           <b-nav-item>
+            <g-link class="nav--link" to="/">Home</g-link>
+          </b-nav-item>
+          <b-nav-item>
             <g-link class="nav--link" to="/about">About</g-link>
           </b-nav-item>
           <b-nav-item>
@@ -21,7 +24,7 @@
           <b-nav-item>
             <g-link class="nav--link" to="/contact">Contact</g-link>
           </b-nav-item>
-          <b-nav-item v-if="isLoggedIn">
+          <!-- <b-nav-item v-if="isLoggedIn">
             <g-link class="ml-3" to="/protected">Protected Page</g-link>
           </b-nav-item>
           <b-nav-item v-if="isLoggedIn">
@@ -29,7 +32,7 @@
           </b-nav-item>
           <b-nav-item v-else>
             <b-link class="ml-3" @click="triggerNetlifyIdentityAction('login')">Log In</b-link>
-          </b-nav-item>
+          </b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -57,17 +60,17 @@ export default {
     ...mapActions('user', {
       updateUser: 'updateUser',
     }),
-    triggerNetlifyIdentityAction(action) {
-      if (action === 'login' || action === 'signup') {
-        // this.$root.$options.netlifyIdentity.open(action);
-        window.netlifyIdentity.open(action);
-      } else if (action === 'logout') {
-        // this.$root.$options.netlifyIdentity.logout();
-        window.netlifyIdentity.logout();
-        this.updateUser(null);
-        // this.$router.push('/');
-      }
-    },
+    // triggerNetlifyIdentityAction(action) {
+    //   if (action === 'login' || action === 'signup') {
+    //     // this.$root.$options.netlifyIdentity.open(action);
+    //     window.netlifyIdentity.open(action);
+    //   } else if (action === 'logout') {
+    //     // this.$root.$options.netlifyIdentity.logout();
+    //     window.netlifyIdentity.logout();
+    //     this.updateUser(null);
+    //     // this.$router.push('/');
+    //   }
+    // },
   },
 };
 </script>
