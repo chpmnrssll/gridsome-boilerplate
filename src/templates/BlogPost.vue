@@ -1,6 +1,12 @@
 <template>
   <Layout>
-    <g-image immediate class="blogImage mb-4" :src="$page.post.image" :alt="$page.post.image" />
+    <g-image
+      immediate
+      class="blogImage mb-4"
+      :src="$page.post.image"
+      :alt="$page.post.image"
+      v-if="$page.post.image"
+    />
     <div class="blogPost">
       <h1 v-html="$page.post.title" class="mb-4" />
       <div class="meta">
