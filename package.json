@@ -23,7 +23,7 @@
     "gridsome-transformer-netlify": "^1.0.3",
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "netlify-cms": "^2.9.1",
     "netlify-cms-lib-util": "^2.3.2",
     "netlify-identity-widget": "^1.5.2",
