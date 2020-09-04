@@ -28,7 +28,7 @@
     "netlify-cms-lib-util": "^2.3.2",
     "netlify-identity-widget": "^1.5.2",
     "netlify-lambda": "^1.4.13",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "popper": "^1.0.1",
     "sass-loader": "^7.1.0",
     "slate-schema-violations": "^0.1.39",
